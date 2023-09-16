@@ -1,0 +1,11 @@
+f10eb13006c9b8b130db12b5f9363773addce7c8 assets/emotion/blockstates/first_block.json
+19ad521fdee49155ab802e3483fb9e6bc6f6a767 assets/emotion/lang/en_us.json
+ca41e53f29283e99fd20f7d5c3a197190e126e26 assets/emotion/models/block/first_block.json
+228ec77b7c6df306dfba75227d211722eae2d3a5 assets/emotion/models/item/emotion_a.json
+86603f0184e209d8ec411bdcdfe6c30257aa27bb assets/emotion/models/item/emotion_b.json
+0fecaf1a7bd3eb59e1e0570c0a8ed8e6138d4567 assets/emotion/models/item/emotion_c.json
+d4e216e148584967ffe95862564781392dd02c7f assets/emotion/models/item/emotion_d.json
+02571c096ad296bcee6e0bc089a727924c6da68b assets/emotion/models/item/emotion_selector.json
+5592fd760631776f85a1bf9e3a8acb19745f5ce6 assets/emotion/models/item/first_block.json
+559bcb8421889dcde80367445030ce8abe38ecf1 data/minecraft/tags/blocks/mineable/pickaxe.json
+559bcb8421889dcde80367445030ce8abe38ecf1 data/minecraft/tags/blocks/needs_iron_tool.json

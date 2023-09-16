@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "emotion:block/first_block"
+    }
+  }
+}

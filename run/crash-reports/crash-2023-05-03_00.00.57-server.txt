@@ -1,0 +1,131 @@
+---- Minecraft Crash Report ----
+// Don't do that.
+
+Time: 2023/5/3 上午12:00
+Description: Ticking player
+
+java.lang.NullPointerException: Cannot invoke "net.minecraft.network.chat.Component.getString()" because the return value of "net.minecraft.world.entity.item.ItemEntity.getCustomName()" is null
+	at zlaire.emotion.init.EventHandler.pickUpItem(EventHandler.java:43) ~[%2384!/:?] {re:classloading}
+	at net.minecraftforge.eventbus.EventBus.doCastFilter(EventBus.java:247) ~[eventbus-5.0.7.jar%2310!/:?] {}
+	at net.minecraftforge.eventbus.EventBus.lambda$addListener$11(EventBus.java:239) ~[eventbus-5.0.7.jar%2310!/:?] {}
+	at net.minecraftforge.eventbus.EventBus.post(EventBus.java:302) ~[eventbus-5.0.7.jar%2310!/:?] {}
+	at net.minecraftforge.eventbus.EventBus.post(EventBus.java:283) ~[eventbus-5.0.7.jar%2310!/:?] {}
+	at net.minecraftforge.event.ForgeEventFactory.onItemPickup(ForgeEventFactory.java:451) ~[forge-1.18.2-40.2.1_mapped_parchment_2022.11.06-1.18.2-recomp.jar%2378%2385!/:?] {re:classloading}
+	at net.minecraft.world.entity.item.ItemEntity.playerTouch(ItemEntity.java:342) ~[forge-1.18.2-40.2.1_mapped_parchment_2022.11.06-1.18.2-recomp.jar%2379!/:?] {re:classloading}
+	at net.minecraft.world.entity.player.Player.touch(Player.java:579) ~[forge-1.18.2-40.2.1_mapped_parchment_2022.11.06-1.18.2-recomp.jar%2379!/:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.world.entity.player.Player.aiStep(Player.java:546) ~[forge-1.18.2-40.2.1_mapped_parchment_2022.11.06-1.18.2-recomp.jar%2379!/:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.world.entity.LivingEntity.tick(LivingEntity.java:2403) ~[forge-1.18.2-40.2.1_mapped_parchment_2022.11.06-1.18.2-recomp.jar%2379!/:?] {re:classloading}
+	at net.minecraft.world.entity.player.Player.tick(Player.java:239) ~[forge-1.18.2-40.2.1_mapped_parchment_2022.11.06-1.18.2-recomp.jar%2379!/:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.server.level.ServerPlayer.doTick(ServerPlayer.java:461) ~[forge-1.18.2-40.2.1_mapped_parchment_2022.11.06-1.18.2-recomp.jar%2379!/:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.server.network.ServerGamePacketListenerImpl.tick(ServerGamePacketListenerImpl.java:212) ~[forge-1.18.2-40.2.1_mapped_parchment_2022.11.06-1.18.2-recomp.jar%2379!/:?] {re:classloading}
+	at net.minecraft.network.Connection.tick(Connection.java:271) ~[forge-1.18.2-40.2.1_mapped_parchment_2022.11.06-1.18.2-recomp.jar%2379!/:?] {re:classloading}
+	at net.minecraft.server.network.ServerConnectionListener.tick(ServerConnectionListener.java:160) ~[forge-1.18.2-40.2.1_mapped_parchment_2022.11.06-1.18.2-recomp.jar%2379!/:?] {re:classloading}
+	at net.minecraft.server.MinecraftServer.tickChildren(MinecraftServer.java:947) ~[forge-1.18.2-40.2.1_mapped_parchment_2022.11.06-1.18.2-recomp.jar%2379!/:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.server.MinecraftServer.tickServer(MinecraftServer.java:873) ~[forge-1.18.2-40.2.1_mapped_parchment_2022.11.06-1.18.2-recomp.jar%2379!/:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.client.server.IntegratedServer.tickServer(IntegratedServer.java:90) ~[forge-1.18.2-40.2.1_mapped_parchment_2022.11.06-1.18.2-recomp.jar%2379!/:?] {re:classloading,pl:runtimedistcleaner:A}
+	at net.minecraft.server.MinecraftServer.runServer(MinecraftServer.java:704) ~[forge-1.18.2-40.2.1_mapped_parchment_2022.11.06-1.18.2-recomp.jar%2379!/:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.server.MinecraftServer.lambda$spin$2(MinecraftServer.java:262) ~[forge-1.18.2-40.2.1_mapped_parchment_2022.11.06-1.18.2-recomp.jar%2379!/:?] {re:classloading,pl:accesstransformer:B}
+	at java.lang.Thread.run(Thread.java:833) [?:?] {}
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Thread: Server thread
+Stacktrace:
+	at zlaire.emotion.init.EventHandler.pickUpItem(EventHandler.java:43) ~[%2384!/:?] {re:classloading}
+	at net.minecraftforge.eventbus.EventBus.doCastFilter(EventBus.java:247) ~[eventbus-5.0.7.jar%2310!/:?] {}
+	at net.minecraftforge.eventbus.EventBus.lambda$addListener$11(EventBus.java:239) ~[eventbus-5.0.7.jar%2310!/:?] {}
+	at net.minecraftforge.eventbus.EventBus.post(EventBus.java:302) ~[eventbus-5.0.7.jar%2310!/:?] {}
+	at net.minecraftforge.eventbus.EventBus.post(EventBus.java:283) ~[eventbus-5.0.7.jar%2310!/:?] {}
+	at net.minecraftforge.event.ForgeEventFactory.onItemPickup(ForgeEventFactory.java:451) ~[forge-1.18.2-40.2.1_mapped_parchment_2022.11.06-1.18.2-recomp.jar%2378%2385!/:?] {re:classloading}
+	at net.minecraft.world.entity.item.ItemEntity.playerTouch(ItemEntity.java:342) ~[forge-1.18.2-40.2.1_mapped_parchment_2022.11.06-1.18.2-recomp.jar%2379!/:?] {re:classloading}
+	at net.minecraft.world.entity.player.Player.touch(Player.java:579) ~[forge-1.18.2-40.2.1_mapped_parchment_2022.11.06-1.18.2-recomp.jar%2379!/:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.world.entity.player.Player.aiStep(Player.java:546) ~[forge-1.18.2-40.2.1_mapped_parchment_2022.11.06-1.18.2-recomp.jar%2379!/:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.world.entity.LivingEntity.tick(LivingEntity.java:2403) ~[forge-1.18.2-40.2.1_mapped_parchment_2022.11.06-1.18.2-recomp.jar%2379!/:?] {re:classloading}
+	at net.minecraft.world.entity.player.Player.tick(Player.java:239) ~[forge-1.18.2-40.2.1_mapped_parchment_2022.11.06-1.18.2-recomp.jar%2379!/:?] {re:classloading,pl:accesstransformer:B}
+-- Player being ticked --
+Details:
+	Entity Type: minecraft:player (net.minecraft.server.level.ServerPlayer)
+	Entity ID: 35
+	Entity Name: Dev
+	Entity's Exact location: 10.70, 0.00, 33.58
+	Entity's Block location: World: (10,0,33), Section: (at 10,0,1 in 0,0,2; chunk contains blocks 0,-64,32 to 15,319,47), Region: (0,0; contains chunks 0,0 to 31,31, blocks 0,-64,0 to 511,319,511)
+	Entity's Momentum: 0.00, -0.08, 0.00
+	Entity's Passengers: []
+	Entity's Vehicle: null
+Stacktrace:
+	at net.minecraft.server.level.ServerPlayer.doTick(ServerPlayer.java:461) ~[forge-1.18.2-40.2.1_mapped_parchment_2022.11.06-1.18.2-recomp.jar%2379!/:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.server.network.ServerGamePacketListenerImpl.tick(ServerGamePacketListenerImpl.java:212) ~[forge-1.18.2-40.2.1_mapped_parchment_2022.11.06-1.18.2-recomp.jar%2379!/:?] {re:classloading}
+	at net.minecraft.network.Connection.tick(Connection.java:271) ~[forge-1.18.2-40.2.1_mapped_parchment_2022.11.06-1.18.2-recomp.jar%2379!/:?] {re:classloading}
+	at net.minecraft.server.network.ServerConnectionListener.tick(ServerConnectionListener.java:160) ~[forge-1.18.2-40.2.1_mapped_parchment_2022.11.06-1.18.2-recomp.jar%2379!/:?] {re:classloading}
+	at net.minecraft.server.MinecraftServer.tickChildren(MinecraftServer.java:947) ~[forge-1.18.2-40.2.1_mapped_parchment_2022.11.06-1.18.2-recomp.jar%2379!/:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.server.MinecraftServer.tickServer(MinecraftServer.java:873) ~[forge-1.18.2-40.2.1_mapped_parchment_2022.11.06-1.18.2-recomp.jar%2379!/:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.client.server.IntegratedServer.tickServer(IntegratedServer.java:90) ~[forge-1.18.2-40.2.1_mapped_parchment_2022.11.06-1.18.2-recomp.jar%2379!/:?] {re:classloading,pl:runtimedistcleaner:A}
+	at net.minecraft.server.MinecraftServer.runServer(MinecraftServer.java:704) ~[forge-1.18.2-40.2.1_mapped_parchment_2022.11.06-1.18.2-recomp.jar%2379!/:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.server.MinecraftServer.lambda$spin$2(MinecraftServer.java:262) ~[forge-1.18.2-40.2.1_mapped_parchment_2022.11.06-1.18.2-recomp.jar%2379!/:?] {re:classloading,pl:accesstransformer:B}
+	at java.lang.Thread.run(Thread.java:833) [?:?] {}
+
+
+-- System Details --
+Details:
+	Minecraft Version: 1.18.2
+	Minecraft Version ID: 1.18.2
+	Operating System: Windows 10 (amd64) version 10.0
+	Java Version: 17.0.5, Oracle Corporation
+	Java VM Version: Java HotSpot(TM) 64-Bit Server VM (mixed mode, sharing), Oracle Corporation
+	Memory: 284164096 bytes (271 MiB) / 1405091840 bytes (1340 MiB) up to 2126512128 bytes (2028 MiB)
+	CPUs: 12
+	Processor Vendor: GenuineIntel
+	Processor Name: Intel(R) Core(TM) i7-9750H CPU @ 2.60GHz
+	Identifier: Intel64 Family 6 Model 158 Stepping 10
+	Microarchitecture: Coffee Lake
+	Frequency (GHz): 2.59
+	Number of physical packages: 1
+	Number of physical CPUs: 6
+	Number of logical CPUs: 12
+	Graphics card #0 name: NVIDIA GeForce GTX 1660 Ti
+	Graphics card #0 vendor: NVIDIA (0x10de)
+	Graphics card #0 VRAM (MB): 4095.00
+	Graphics card #0 deviceId: 0x2191
+	Graphics card #0 versionInfo: DriverVersion=30.0.14.9649
+	Memory slot #0 capacity (MB): 8192.00
+	Memory slot #0 clockSpeed (GHz): 2.67
+	Memory slot #0 type: DDR4
+	Virtual memory max (MB): 19594.45
+	Virtual memory used (MB): 14455.11
+	Swap memory total (MB): 11483.21
+	Swap memory used (MB): 1159.05
+	JVM Flags: 1 total; -XX:HeapDumpPath=MojangTricksIntelDriversForPerformance_javaw.exe_minecraft.exe.heapdump
+	Server Running: true
+	Player Count: 1 / 8; [ServerPlayer['Dev'/35, l='ServerLevel[evemt_test]', x=10.70, y=0.00, z=33.58]]
+	Data Packs: vanilla, mod:emotion, mod:forge
+	World Generation: Stable
+	Type: Integrated Server (map_client.txt)
+	Is Modded: Definitely; Client brand changed to 'forge'; Server brand changed to 'forge'
+	ModLauncher: 9.1.3+9.1.3+main.9b69c82a
+	ModLauncher launch target: forgeclientuserdev
+	ModLauncher naming: mcp
+	ModLauncher services: 
+		 mixin PLUGINSERVICE 
+		 eventbus PLUGINSERVICE 
+		 slf4jfixer PLUGINSERVICE 
+		 object_holder_definalize PLUGINSERVICE 
+		 runtime_enum_extender PLUGINSERVICE 
+		 capability_token_subclass PLUGINSERVICE 
+		 accesstransformer PLUGINSERVICE 
+		 runtimedistcleaner PLUGINSERVICE 
+		 mixin TRANSFORMATIONSERVICE 
+		 fml TRANSFORMATIONSERVICE 
+	FML Language Providers: 
+		minecraft@1.0
+		lowcodefml@null
+		javafml@null
+	Mod List: 
+		forge-1.18.2-40.2.1_mapped_parchment_2022.11.06-1.|Minecraft                     |minecraft                     |1.18.2              |DONE      |Manifest: a1:d4:5e:04:4f:d3:d6:e0:7b:37:97:cf:77:b0:de:ad:4a:47:ce:8c:96:49:5f:0a:cf:8c:ae:b2:6d:4b:8a:3f
+		main                                              |emotion                       |emotion                       |0.0NONE             |DONE      |Manifest: NOSIGNATURE
+		                                                  |Forge                         |forge                         |40.2.1              |DONE      |Manifest: NOSIGNATURE
+	Crash Report UUID: 3b45b3be-2a6a-4999-8cf7-3f36456e544d
+	FML: 40.2
+	Forge: net.minecraftforge:40.2.1
