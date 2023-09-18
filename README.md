@@ -1,5 +1,5 @@
 # Emotion_MC
-##Quick Start
+## Quick Start
 1. install python
 2. copy myApp.py and solver.py to your local environment
 3. install all requirements
