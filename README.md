@@ -6,4 +6,4 @@
 4. install Minecraft 1.18.2 with forge
 5. copy emotion-1.0.jar to the mod folder of Minecraft
 6. launch myAPP.py
-7. launch Minecraft
+7. launch Minecraft and load the mod
